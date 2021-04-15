@@ -1,7 +1,7 @@
 tjc98_gui contains the working gui, while tjc98_1660_project contains the nonfunctional communication components.
 As such, tjc98_gui is the gui that will work, and in order to do so:
 1. navigate inside the folder in your console
-2. docker build -t [image name]
+2. docker build -t [image name] .
 3. docker run -ti --rm -e DISPLAY=[your ip]:0 [image name]
 using javax with the docker container is finicky, because of X11 compatability. This is why you are required to put your ip(which can be found using ipconfig /all on Windows), and the 0 represents the monitor it is being displayed too.
 Note that I was unable to figure out the communication between the gui and the cluster, as I ran into many issues using the google libraries. They are included in tjc98_1660_project for reference, but that file does not function properly.
